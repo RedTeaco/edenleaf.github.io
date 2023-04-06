@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Hexo常见问题&amp;方法</title>
+    <link href="/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/"/>
+    <url>/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、Hexo三部曲"><a href="#一、Hexo三部曲" class="headerlink" title="一、Hexo三部曲"></a>一、Hexo三部曲</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure><p>hexo g(generate)，即重新生成页面</p><p>hexo d(develop)，即部署页面到远程仓库</p><p>hexo s则可在本地打开端口预览Blog</p><h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo n <span class="hljs-string">&quot;文章名称&quot;</span><br></code></pre></td></tr></table></figure><p>即为新建名为“文章名称”的页面</p><p>在hexo博客里，文章均放在&#x2F;source&#x2F;_posts目录下，以.md格式存储。</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title: &#x27;&#x27;<br>date: 2023<span class="hljs-string">-04</span><span class="hljs-string">-06</span> 19:32:11<br>categories: &#x27;1&#x27;<br><span class="hljs-keyword">tags:</span><br>- 2<br></code></pre></td></tr></table></figure><p>在该示例中，categories后的’1’表示将该文章放置在分类名为1的分类下。</p><p>tags -2中的2表示给该文章打上2的标签。</p><p><strong>注：要使用该功能，需要先按如下步骤配置</strong></p><hr><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo new page categories<br>hexo new page tags<br></code></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;categories&#x2F;index.md</p><p>默认内容为</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">title</span>: categories<br><span class="hljs-attribute">date</span>: <span class="hljs-number">2023</span>-<span class="hljs-number">04</span>-<span class="hljs-number">06</span> <span class="hljs-number">19</span>:<span class="hljs-number">31</span>:<span class="hljs-number">13</span><br></code></pre></td></tr></table></figure><p>在下方添加type: categories</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">title</span>: categories<br><span class="hljs-attribute">date</span>: <span class="hljs-number">2023</span>-<span class="hljs-number">04</span>-<span class="hljs-number">06</span> <span class="hljs-number">19</span>:<span class="hljs-number">31</span>:<span class="hljs-number">13</span><br><span class="hljs-attribute">type</span>: categories<br></code></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;tags&#x2F;index.md</p><p>默认内容为</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">title</span>: tags<br><span class="hljs-attribute">date</span>: <span class="hljs-number">2023</span>-<span class="hljs-number">04</span>-<span class="hljs-number">06</span> <span class="hljs-number">19</span>:<span class="hljs-number">31</span>:<span class="hljs-number">13</span><br></code></pre></td></tr></table></figure><p>在下方添加type: “tags”</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">title</span>: tags<br><span class="hljs-attribute">date</span>: <span class="hljs-number">2023</span>-<span class="hljs-number">04</span>-<span class="hljs-number">06</span> <span class="hljs-number">19</span>:<span class="hljs-number">31</span>:<span class="hljs-number">13</span><br><span class="hljs-attribute">type</span>: <span class="hljs-string">&quot;tags&quot;</span><br></code></pre></td></tr></table></figure><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo攻略</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/04/06/hello-world/"/>
     <url>/2023/04/06/hello-world/</url>
