@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo常见问题&amp;方法</title>
+      <link href="/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/"/>
+      <url>/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、Hexo三部曲"><a href="#一、Hexo三部曲" class="headerlink" title="一、Hexo三部曲"></a>一、Hexo三部曲</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>hexo g(generate)，即重新生成页面</p><p>hexo d(develop)，即部署页面到远程仓库</p><p>hexo s则可在本地打开端口预览Blog</p><h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure><p>即为新建名为“文章名称”的页面</p><p>在hexo博客里，文章均放在&#x2F;source&#x2F;_posts目录下，以.md格式存储。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: &#x27;&#x27;</span><br><span class="line">date: 2023-04-06 19:32:11</span><br><span class="line">categories: &#x27;1&#x27;</span><br><span class="line">tags:</span><br><span class="line">- 2</span><br></pre></td></tr></table></figure><p>在该示例中，categories后的’1’表示将该文章放置在分类名为1的分类下。</p><p>tags -2中的2表示给该文章打上2的标签。</p><p><strong>注：要使用该功能，需要先按如下步骤配置</strong></p><hr><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;categories&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: categories</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: categories</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;tags&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: “tags”</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure><hr><p>附有用的链接：</p><ul><li><a href="https://blog.csdn.net/howareyou2104/article/details/106312703">如何用Hexo优雅的书写文章</a></li><li><a href="https://hexo.io/zh-cn/docs/front-matter">Front-matter | Hexo</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo攻略 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/04/06/hello-world/"/>
+      <url>/2023/04/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
