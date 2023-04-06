@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>记一次PyQt安装后运行出错</title>
+      <link href="/2023/04/06/%E8%AE%B0%E4%B8%80%E6%AC%A1PyQt%E5%AE%89%E8%A3%85%E5%90%8E%E8%BF%90%E8%A1%8C%E5%87%BA%E9%94%99/"/>
+      <url>/2023/04/06/%E8%AE%B0%E4%B8%80%E6%AC%A1PyQt%E5%AE%89%E8%A3%85%E5%90%8E%E8%BF%90%E8%A1%8C%E5%87%BA%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在Python&#x3D;&#x3D;3.10的环境下，无法安装<strong>qt5-tools</strong>，但缺少该包会导致GUI的诸多问题，包括闪退。</p><p>无法启动的报错之一：<font color=Red>关于<strong>ImportError: DLL load failed while importing QtWidgets: 找不到指定的程序。</strong></font></p><p>因此我选择安装<u>PyQt6</u></p><hr><p>使用如下命令安装pyqt6的环境</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt6</span><br></pre></td></tr></table></figure><p>运行该命令后，依赖包也会同时安装，但会出现问题：</p><p>其中的PyQt6-Qt6的版本与PyQt6的版本不对。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall PyQt6-Qt6</span><br><span class="line">pip install PyQt6-Qt6==<span class="number">6</span>.<span class="number">1</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure><p><strong>注：</strong>这里的6.1.0即PyQt6的版本</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> PyQt </tag>
+            
+            <tag> GUI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WSL更新软件包失败</title>
       <link href="/2023/04/06/WSL%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%A4%B1%E8%B4%A5/"/>
       <url>/2023/04/06/WSL%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%A4%B1%E8%B4%A5/</url>
