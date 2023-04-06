@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>WSL更新软件包失败</title>
+      <link href="/2023/04/06/WSL%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%A4%B1%E8%B4%A5/"/>
+      <url>/2023/04/06/WSL%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%A4%B1%E8%B4%A5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>在使用 WSL2 时，使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install xxx</span><br><span class="line">wget https://xxx</span><br></pre></td></tr></table></figure><p>等命令时，报错cannot handshake。</p><h1 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h1><h2 id="临时更改"><a href="#临时更改" class="headerlink" title="临时更改"></a>临时更改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ip <span class="built_in">link</span> <span class="built_in">set</span> dev eth0 mtu 1350</span><br></pre></td></tr></table></figure><p><strong>此方法在重启后失效</strong></p><h2 id="永久更改"><a href="#永久更改" class="headerlink" title="永久更改"></a>永久更改</h2><p><strong>注：该方法只适用于使用netplan的Ubuntu</strong></p><p>在较新版本的Ubuntu上，网络管理采用netplan</p><p>​</p><p><strong>netplan配置文件路径：&#x2F;etc&#x2F;netplan&#x2F;*.yaml</strong></p><p>默认状态下，netplan文件夹下可能不存在任何文件，可新建文件。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#filename: config.yaml</span></span><br><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">networkd</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">match:</span></span><br><span class="line">        <span class="string">macaddress:**:**:**:**:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">yes</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">no</span></span><br><span class="line">      <span class="attr">mtu:</span> <span class="number">1350</span></span><br></pre></td></tr></table></figure><p>-此处的<strong>renderer</strong>和<strong>version</strong>值一般是固定的。</p><p>-<strong>ethernets</strong>下为有线网卡</p><p>-<strong>eth0</strong>是网卡名。</p><p>-在配置mtu时，官方建议使用<strong>match</strong>下的mac地址来绑定网卡而不单纯是网卡名。</p><p>-<strong>mtu</strong>更改为1350</p><p>​</p><p>使用WSL时，系统文件可能会残缺不全导致netplan配置无法应用，此时关闭当前bash，打开powershell，依次输入如下代码：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--shutdown</span></span><br><span class="line">wsl <span class="literal">--update</span></span><br></pre></td></tr></table></figure><p>执行完成后，再进入WSL即可完成netplan的配置。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> WSL相关问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WSL </tag>
+            
+            <tag> 网络配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo常见问题&amp;方法</title>
       <link href="/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/"/>
       <url>/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/</url>
@@ -23,19 +50,6 @@
             <tag> hexo </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2023/04/06/hello-world/"/>
-      <url>/2023/04/06/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
