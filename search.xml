@@ -4,6 +4,116 @@
   
     
     <entry>
+      <title>md常用语法总结</title>
+      <link href="/2023/04/08/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+      <url>/2023/04/08/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、链接"><a href="#一、链接" class="headerlink" title="一、链接"></a>一、链接</h1><p><a href="https://markdown.com.cn/"><font color=orange>Markdown 官方教程</font></a></p><p>​</p><h1 id="二、总结"><a href="#二、总结" class="headerlink" title="二、总结"></a>二、总结</h1><h2 id="（一）基本语法"><a href="#（一）基本语法" class="headerlink" title="（一）基本语法"></a>（一）基本语法</h2><h3 id="1、标题"><a href="#1、标题" class="headerlink" title="1、标题"></a>1、标题</h3><table><thead><tr><th>Markdown语法</th><th>HTML</th><th>效果</th></tr></thead><tbody><tr><td><code># Heading level 1</code></td><td><code>&lt;h1&gt;Heading level 1&lt;/h1&gt;</code></td><td><h1>Heading level 1</h1></td></tr><tr><td><code>## Heading level 2</code></td><td><code>&lt;h2&gt;Heading level 2&lt;/h2&gt;</code></td><td><h2>Heading level 2</h2></td></tr><tr><td><code>### Heading level 3</code></td><td><code>&lt;h3&gt;Heading level 3&lt;/h3&gt;</code></td><td><h3>Heading level 3</h3></td></tr><tr><td><code>#### Heading level 4</code></td><td><code>&lt;h4&gt;Heading level 4&lt;/h4&gt;</code></td><td><h4>Heading level 4</h4></td></tr><tr><td><code>##### Heading level 5</code></td><td><code>&lt;h5&gt;Heading level 5&lt;/h5&gt;</code></td><td><h5>Heading level 5</h5></td></tr><tr><td><code>###### Heading level 6</code></td><td><code>&lt;h6&gt;Heading level 6&lt;/h6&gt;</code></td><td><h6>Heading level 6</h6></td></tr></tbody></table><p><strong><font color=red>注：使用“#”时，在“#”和后面的文字之间需要有一个空格</font></strong></p><hr><h3 id="2、段落"><a href="#2、段落" class="headerlink" title="2、段落"></a>2、段落</h3><p>MD会自动合并空白行</p><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p><p>可以通过按<code>Tab+Enter</code>来增加行</p><p>可使用HTML语法来标识段落：<code>&lt;p&gt;text&lt;/p&gt;</code></p><hr><h3 id="3、换行"><a href="#3、换行" class="headerlink" title="3、换行"></a>3、换行</h3><hr><h3 id="4、强调"><a href="#4、强调" class="headerlink" title="4、强调"></a>4、强调</h3><hr><h3 id="5、引用"><a href="#5、引用" class="headerlink" title="5、引用"></a>5、引用</h3><hr><h3 id="6、列表"><a href="#6、列表" class="headerlink" title="6、列表"></a>6、列表</h3><hr><h3 id="7、代码"><a href="#7、代码" class="headerlink" title="7、代码"></a>7、代码</h3><h4 id="单个代码框"><a href="#单个代码框" class="headerlink" title="单个代码框"></a>单个代码框</h4><p>要将单词或短语表示为代码，可将文本包裹在反引号”<font color=orange>&#96;</font>“中。</p><table><thead><tr><th>Markdown语法</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td><code>At the command prompt, type`nano`.</code></td><td><code>At the command prompt, type &lt;code&gt;nano&lt;/code&gt;.</code></td><td>At the command prompt, type <code>nano</code>.</td></tr></tbody></table><p><strong><font size=5>转义反引号</font></strong></p><p>如果要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(<code>``</code>)中。</p><table><thead><tr><th>Markdown语法</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td><code>``Use `code` in your Markdown file.``</code></td><td><code>&lt;code&gt; Use `code` in your Markdown file.&lt;/code&gt;</code></td><td><code>Use `code` in your Markdown file.</code></td></tr></tbody></table><h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>使用三个反引号<code>```</code>或三个波浪号<code>~~~</code>来创建代码块。</p><p><strong><font size=5>语法高亮</font></strong></p><p>在三个反引号后面添加语言名称，即可实现语法高亮</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```json</span><br><span class="line">&#123;</span><br><span class="line">&quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">&quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">&quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure><p>效果：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;firstName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;lastName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Smith&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><hr><h3 id="8、分割线"><a href="#8、分割线" class="headerlink" title="8、分割线"></a>8、分割线</h3><hr><h3 id="9、链接"><a href="#9、链接" class="headerlink" title="9、链接"></a>9、链接</h3><hr><h3 id="10、图片"><a href="#10、图片" class="headerlink" title="10、图片"></a>10、图片</h3><hr><h3 id="11、转义字符"><a href="#11、转义字符" class="headerlink" title="11、转义字符"></a>11、转义字符</h3><hr><h3 id="12、内嵌HTML标签"><a href="#12、内嵌HTML标签" class="headerlink" title="12、内嵌HTML标签"></a>12、内嵌HTML标签</h3><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> MarkDown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WSL自动开启代理脚本（利用Clash）</title>
+      <link href="/2023/04/08/WSL%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E4%BB%A3%E7%90%86%E8%84%9A%E6%9C%AC%EF%BC%88%E5%88%A9%E7%94%A8Clash%EF%BC%89/"/>
+      <url>/2023/04/08/WSL%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E4%BB%A3%E7%90%86%E8%84%9A%E6%9C%AC%EF%BC%88%E5%88%A9%E7%94%A8Clash%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>脚本如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">host_ip=$(<span class="built_in">cat</span> /etc/resolv.conf | grep <span class="string">&quot;nameserver&quot;</span> |<span class="built_in">cut</span> -f 2 -d <span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="built_in">export</span> ALL_PROXY=<span class="string">&quot;http://<span class="variable">$host_ip</span>:7890&quot;</span></span><br></pre></td></tr></table></figure><ul><li>该脚本适用于宿主机上的clash配置允许局域网</li><li>7890为clash分享的局域网端口</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> WSL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WSL </tag>
+            
+            <tag> 网络配置 </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue3相关问题</title>
+      <link href="/2023/04/08/Vue3%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/04/08/Vue3%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、不能使用import-Vue-from-‘vue’"><a href="#一、不能使用import-Vue-from-‘vue’" class="headerlink" title="一、不能使用import Vue from ‘vue’"></a>一、不能使用<font color=orange>import Vue from ‘vue’</font></h1><p>在Vue2中，写法是<font color=orange>import Vue from ‘vue’</font>没有问题，但在Vue3中这样写就会报错。</p><p>解决方式：</p><p>写成**<font color=orange>import {createApp} from ‘vue’</font>**</p><p><font color=orange><code>Vue.use(Rounter)</code></font>也不再在<font color=cyan>router&#x2F;index.js</font>中，而是在<font color=cyan>main.js</font>中，且有写法上的更改：</p><p>由<font color=orange><code>Vue.use(Rounter)</code></font>变为了</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(router)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure><p>​</p><h1 id="二、Route"><a href="#二、Route" class="headerlink" title="二、Route"></a>二、Route</h1><p>在Vue2中：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Router</span> <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br></pre></td></tr></table></figure><p>在Vue3中需要更改为：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;createRouter, createWebHistory&#125; <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Router</span> = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">    <span class="attr">history</span>: routerHistory,</span><br><span class="line">    <span class="attr">routes</span>: [&#123;&#125;,</span><br><span class="line">            &#123;&#125;,</span><br><span class="line">            &#123;&#125;</span><br><span class="line">            ]</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Router</span></span><br></pre></td></tr></table></figure><h1 id="三、使用router-link不跳转"><a href="#三、使用router-link不跳转" class="headerlink" title="三、使用router-link不跳转"></a>三、使用router-link不跳转</h1><p>目前试验结论：</p><p><font color=orange><code>createApp(App)</code></font>可以解决问题，括号内的不要随便更换，然后在App页面写上</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;/router-view&gt;</span><br><span class="line">&lt;template&gt;</span><br></pre></td></tr></table></figure><p>即可解决</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue3 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue3 </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java项目使用exe4j打包</title>
+      <link href="/2023/04/08/Java%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8exe4j%E6%89%93%E5%8C%85/"/>
+      <url>/2023/04/08/Java%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8exe4j%E6%89%93%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、打包完成后无法启动"><a href="#一、打包完成后无法启动" class="headerlink" title="一、打包完成后无法启动"></a>一、打包完成后无法启动</h1><p>在项目中添加<font color=green>spring</font>后，打包时选择主类时需要选择<font color=red>jarLauncher</font>作为主类，不然无法启动。</p><p>​</p><h1 id="二、IDEA打包失败"><a href="#二、IDEA打包失败" class="headerlink" title="二、IDEA打包失败"></a>二、IDEA打包失败</h1><p>某些项目使用IDEA的构建工具构建时，打包成单个项目（单个.jar文件）无法正常运行，此时可以：</p><p>1.打包成多个文件</p><p><strong><u>2.使用maven的package来打包</u></strong></p><p><strong><font color=red>推荐使用方法2，因为使用方法一可能会给后面的exe4j打包带来其他麻烦</font></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 打包项目 </tag>
+            
+            <tag> exe4j </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Anaconda常见配置</title>
       <link href="/2023/04/07/Anaconda%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
       <url>/2023/04/07/Anaconda%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/</url>
@@ -102,7 +212,7 @@
       
       <categories>
           
-          <category> WSL相关问题 </category>
+          <category> WSL </category>
           
       </categories>
       
@@ -112,6 +222,8 @@
             <tag> WSL </tag>
             
             <tag> 网络配置 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -124,7 +236,7 @@
       <link href="/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/"/>
       <url>/2023/04/06/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E6%96%B9%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、Hexo三部曲"><a href="#一、Hexo三部曲" class="headerlink" title="一、Hexo三部曲"></a>一、Hexo三部曲</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>hexo g(generate)，即重新生成页面</p><p>hexo d(develop)，即部署页面到远程仓库</p><p>hexo s则可在本地打开端口预览Blog</p><h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure><p>即为新建名为“文章名称”的页面</p><p>在hexo博客里，文章均放在&#x2F;source&#x2F;_posts目录下，以.md格式存储。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: &#x27;&#x27;</span><br><span class="line">date: 2023-04-06 19:32:11</span><br><span class="line">categories: &#x27;1&#x27;</span><br><span class="line">tags:</span><br><span class="line">- 2</span><br></pre></td></tr></table></figure><p>在该示例中，categories后的’1’表示将该文章放置在分类名为1的分类下。</p><p>tags -2中的2表示给该文章打上2的标签。</p><p><strong>注：要使用该功能，需要先按如下步骤配置</strong></p><hr><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;categories&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: categories</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: categories</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;tags&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: “tags”</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure><hr><p>附有用的链接：</p><ul><li><a href="https://blog.csdn.net/howareyou2104/article/details/106312703">如何用Hexo优雅的书写文章</a></li><li><a href="https://hexo.io/zh-cn/docs/front-matter">Front-matter | Hexo</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、Hexo三部曲"><a href="#一、Hexo三部曲" class="headerlink" title="一、Hexo三部曲"></a>一、Hexo三部曲</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>hexo g(generate)，即重新生成页面</p><p>hexo d(develop)，即部署页面到远程仓库</p><p>hexo s则可在本地打开端口预览Blog</p><h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure><p>即为新建名为“文章名称”的页面</p><p>在hexo博客里，文章均放在&#x2F;source&#x2F;_posts目录下，以.md格式存储。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: &#x27;&#x27;</span><br><span class="line">date: 2023-04-06 19:32:11</span><br><span class="line">categories: &#x27;1&#x27;</span><br><span class="line">tags:</span><br><span class="line">- 2</span><br></pre></td></tr></table></figure><p>在该示例中，categories后的’1’表示将该文章放置在分类名为1的分类下。</p><p>tags -2中的2表示给该文章打上2的标签。</p><p><strong>注：要使用该功能，需要先按如下步骤配置</strong></p><hr><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;categories&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: categories</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: categories</span><br></pre></td></tr></table></figure><p>打开&#x2F;source&#x2F;tags&#x2F;index.md</p><p>默认内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br></pre></td></tr></table></figure><p>在下方添加type: “tags”</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-04-06 19:31:13</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure><hr><p>附有用的链接：</p><ul><li><a href="https://blog.csdn.net/howareyou2104/article/details/106312703">如何用Hexo优雅的书写文章</a></li><li><a href="https://hexo.io/zh-cn/docs/front-matter">Front-matter | Hexo</a></li></ul><h1 id="三、如何插入图片"><a href="#三、如何插入图片" class="headerlink" title="三、如何插入图片"></a>三、如何插入图片</h1><p>根据部署后的目录可以发现，在根目录下有一个<font color=cyan>images</font>目录，因此只需要把图片放在该目录下，即可在部署后的页面中引用。</p><h2 id="1-目录所在位置"><a href="#1-目录所在位置" class="headerlink" title="1.目录所在位置"></a>1.目录所在位置</h2><p>虽然在部署好的页面可以看到<font color=cyan>该目录</font>在根目录下，但在本地，该目录的路径为<font color=orange>&#x2F;themes&#x2F;your_theme_name&#x2F;source&#x2F;images</font>下</p><p><strong><font color=red>注：不同的主题该路径名称可能有区别</font></strong></p><h2 id="2-插入图片"><a href="#2-插入图片" class="headerlink" title="2.插入图片"></a>2.插入图片</h2><p>找到该目录后，将想插入的图片放入该文件夹中，之后在md文件中插入图片，图片路径写为<font color=orange>&#x2F;images&#x2F;pic_name</font>.</p><p><font color=orange>images</font>的具体名称根据部署后的目录名称来定(有可能是img)。</p><p><font color=orange>pic_name</font>即为图片名称，需要加上后缀名</p><p><strong><font color=red>此时图片已经插入完成，但在本地无法正常识别，可以通过以下命令预览</font></strong></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
